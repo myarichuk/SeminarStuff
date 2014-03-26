@@ -1,0 +1,25 @@
+{
+  "Name": "Auto/Laptops/ByCpu",
+  "LockMode": "Unlock",
+  "Map": "from doc in docs.Laptops\r\nselect new { Cpu = doc.Cpu }",
+  "Maps": [
+    "from doc in docs.Laptops\r\nselect new { Cpu = doc.Cpu }"
+  ],
+  "Reduce": null,
+  "TransformResults": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {
+    "Cpu": "Cpu"
+  },
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false
+}

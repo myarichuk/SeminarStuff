@@ -1,0 +1,25 @@
+{
+  "Name": "Auto/Laptops/ByManufacturer",
+  "LockMode": "Unlock",
+  "Map": "from doc in docs.Laptops\r\nselect new { Manufacturer = doc.Manufacturer }",
+  "Maps": [
+    "from doc in docs.Laptops\r\nselect new { Manufacturer = doc.Manufacturer }"
+  ],
+  "Reduce": null,
+  "TransformResults": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {
+    "Manufacturer": "Manufacturer"
+  },
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false
+}

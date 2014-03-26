@@ -1,0 +1,28 @@
+{
+  "Name": "Auto/Laptops/ByCpuAndRamSizeInMegabatyes_RangeSortByRamSizeInMegabatyes",
+  "LockMode": "Unlock",
+  "Map": "from doc in docs.Laptops\r\nselect new { RamSizeInMegabatyes = doc.RamSizeInMegabatyes, Cpu = doc.Cpu }",
+  "Maps": [
+    "from doc in docs.Laptops\r\nselect new { RamSizeInMegabatyes = doc.RamSizeInMegabatyes, Cpu = doc.Cpu }"
+  ],
+  "Reduce": null,
+  "TransformResults": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "RamSizeInMegabatyes": "Int"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {
+    "RamSizeInMegabatyes_Range": "RamSizeInMegabatyes_Range",
+    "Cpu": "Cpu"
+  },
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false
+}
