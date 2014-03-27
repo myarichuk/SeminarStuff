@@ -61,25 +61,25 @@ namespace Facets
 				        Console.WriteLine(laptop);
 				    }
 
-				    var facetResults = query
-				        .ToFacets(new List<Facet>
-				        {
-				            new Facet<Laptop>
-				            {
-				                Name = x => x.Manufacturer,
-				            },
-				            new Facet<Laptop>
-				            {
-				                Name = x => x.RamSizeInMegabatyes,
-				                Ranges =
-				                {
-				                    x => x.RamSizeInMegabatyes < 2000,
-				                    x => x.RamSizeInMegabatyes > 2000 && x.RamSizeInMegabatyes < 4000,
-				                    x => x.RamSizeInMegabatyes > 4000 && x.RamSizeInMegabatyes < 6000,
-				                    x => x.RamSizeInMegabatyes > 6000 && x.RamSizeInMegabatyes < 8000
-				                }
-				            },
-				        });
+                    var facetResults = session.Query<Laptop, LaptopIndex>()
+				                              .ToFacets(new List<Facet>
+				                                {
+				                                    new Facet<Laptop>
+				                                    {
+				                                        Name = x => x.Manufacturer,
+				                                    },
+				                                    new Facet<Laptop>
+				                                    {
+				                                        Name = x => x.RamSizeInMegabatyes,
+				                                        Ranges =
+				                                        {
+				                                            x => x.RamSizeInMegabatyes < 2000,
+				                                            x => x.RamSizeInMegabatyes > 2000 && x.RamSizeInMegabatyes < 4000,
+				                                            x => x.RamSizeInMegabatyes > 4000 && x.RamSizeInMegabatyes < 6000,
+				                                            x => x.RamSizeInMegabatyes > 6000 && x.RamSizeInMegabatyes < 8000
+				                                        }
+				                                    },
+				                                });
 
 				    foreach (var facetResult in facetResults.Results)
 				    {
