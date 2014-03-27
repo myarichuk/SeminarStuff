@@ -21,9 +21,7 @@ namespace VoronDemo
             //in 32bit mode it might be impossible to find continuous blocks of large enough memory
             //if TestElementsCount or TestElementSize are big
             Console.WriteLine("Is running under 64 bits? " + Environment.Is64BitProcess);
-            Console.Write("Generating random {0} byte values...", TestElementSize);
             var testData = GenerateTestData(TestElementsCount).ToList();
-            Console.WriteLine("done");
             
             using (var env = new StorageEnvironment(StorageEnvironmentOptions
                 .ForPath(Environment.CurrentDirectory + "\\Data" + Guid.NewGuid())))
